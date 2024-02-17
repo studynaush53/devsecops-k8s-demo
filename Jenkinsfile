@@ -19,12 +19,12 @@ pipeline {
               }
             }
       stage('Docker Build and Push') {
-        steps {
-          sh 'printenv'
-          sh 'docker build -t naush53/numerc:""$GIT_COMMIT"" .'
-          sh 'docker push naush53/numerc:""GIT_COMMIT""'
-        }
-      }
+            steps {
+               sh 'printenv'
+               sh 'docker build -t naush53/numerc:""$GIT_COMMIT"" .'
+              sh 'docker push naush53/numerc:""GIT_COMMIT""'
+            }
+            }
       }      
     }
 }
